@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5873ACBB-62A8-47E2-82C6-DFA892BBAEBB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RsrrPayroll</RootNamespace>
+    <AssemblyName>RsrrPayroll</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="itextsharp">
+      <HintPath>..\..\..\..\Downloads\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=8.0.25.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="app.cs" />
+    <Compile Include="dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="dashboard.Designer.cs">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Data\Jabatan.cs" />
+    <Compile Include="Data\Pendidikan.cs" />
+    <Compile Include="Data\Potongan.cs" />
+    <Compile Include="db.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmBagian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBagian.Designer.cs">
+      <DependentUpon>frmBagian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmCetakSlip.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmCetakSlip.Designer.cs">
+      <DependentUpon>frmCetakSlip.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmDataKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmDataKaryawan.Designer.cs">
+      <DependentUpon>frmDataKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmGajiPokok.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmGajiPokok.Designer.cs">
+      <DependentUpon>frmGajiPokok.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmIntensif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmIntensif.Designer.cs">
+      <DependentUpon>frmIntensif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJabatan.Designer.cs">
+      <DependentUpon>frmJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmKaryawan.Designer.cs">
+      <DependentUpon>frmKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPilihIntensif.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilihIntensif.Designer.cs">
+      <DependentUpon>frmPilihIntensif.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPilihJabatan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilihJabatan.Designer.cs">
+      <DependentUpon>frmPilihJabatan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPilihKaryawan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilihKaryawan.Designer.cs">
+      <DependentUpon>frmPilihKaryawan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPilihTunjangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPilihTunjangan.Designer.cs">
+      <DependentUpon>frmPilihTunjangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmProfesi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProfesi.Designer.cs">
+      <DependentUpon>frmProfesi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTambahPendidikan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTambahPendidikan.Designer.cs">
+      <DependentUpon>frmTambahPendidikan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTmbLembur.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTmbLembur.Designer.cs">
+      <DependentUpon>frmTmbLembur.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTmbPotongan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTmbPotongan.Designer.cs">
+      <DependentUpon>frmTmbPotongan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmTunjangan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTunjangan.Designer.cs">
+      <DependentUpon>frmTunjangan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmPenggajian.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmPenggajian.Designer.cs">
+      <DependentUpon>frmPenggajian.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="dashboard.resx">
+      <DependentUpon>dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBagian.resx">
+      <DependentUpon>frmBagian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmCetakSlip.resx">
+      <DependentUpon>frmCetakSlip.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmDataKaryawan.resx">
+      <DependentUpon>frmDataKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmGajiPokok.resx">
+      <DependentUpon>frmGajiPokok.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmIntensif.resx">
+      <DependentUpon>frmIntensif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmJabatan.resx">
+      <DependentUpon>frmJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmKaryawan.resx">
+      <DependentUpon>frmKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilihIntensif.resx">
+      <DependentUpon>frmPilihIntensif.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilihJabatan.resx">
+      <DependentUpon>frmPilihJabatan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilihKaryawan.resx">
+      <DependentUpon>frmPilihKaryawan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPilihTunjangan.resx">
+      <DependentUpon>frmPilihTunjangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProfesi.resx">
+      <DependentUpon>frmProfesi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTambahPendidikan.resx">
+      <DependentUpon>frmTambahPendidikan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTmbLembur.resx">
+      <DependentUpon>frmTmbLembur.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTmbPotongan.resx">
+      <DependentUpon>frmTmbPotongan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTunjangan.resx">
+      <DependentUpon>frmTunjangan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmPenggajian.resx">
+      <DependentUpon>frmPenggajian.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Header.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Banner Teratai %28110x70 plong&amp;lebihan%29.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1556608.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.7.2 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\V-Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\userLks.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notit2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture3.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture4.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Picture5.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
